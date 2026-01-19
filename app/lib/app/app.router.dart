@@ -34,9 +34,9 @@ import 'package:stacked_services/stacked_services.dart' as _i15;
 class Routes {
   static const homeView = '/home-view';
 
-  static const startupView = '/startup-view';
+  static const startupView = '/';
 
-  static const splashView = '/';
+  static const splashView = '/splash-view';
 
   static const onboardingSlidesView = '/onboarding-slides-view';
 

@@ -6,7 +6,7 @@ import 'package:stacked/stacked.dart';
 
 import '../../../app/app.locator.dart';
 import '../../../commons/app_colors.dart';
-import '../../../domain/repos/auth_repository.dart';
+// import '../../../domain/repos/auth_repository.dart';
 
 
 // ignore: must_be_immutable
@@ -132,14 +132,15 @@ class AppPhoneInputState extends State<AppPhoneInput> {
 
 class ViewModel extends BaseViewModel {
 
-  PhoneNumber number = PhoneNumber(isoCode: 'CA',);
+  PhoneNumber number = PhoneNumber(isoCode: 'BJ');
 
-  Future<bool> init() async  {
-    await AuthRepository.getIpInfo((ipInfo) {
-      number = PhoneNumber(isoCode:
-      ipInfo.countryCode.toString().toUpperCase());
-      rebuildUi();
-    }, (error) {});
+  Future<bool> init() async  { 
+    // await AuthRepository.getIpInfo((ipInfo) {
+    //   number = PhoneNumber(isoCode:
+    //   ipInfo.countryCode.toString().toUpperCase());
+    //   rebuildUi();
+    // }, (error) {});
+    
     return true;
   }
 
