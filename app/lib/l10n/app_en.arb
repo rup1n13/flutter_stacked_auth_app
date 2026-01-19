@@ -1,0 +1,189 @@
+{
+  "appTitle": "Koolika",
+
+  "vrtlcToast": "Please fill in all fields",
+  "ueesvrToast": "An error occurred! Please try again",
+  "irasvvcToast": "Registration successful! Please log in",
+  "civrToast": "Incorrect code! Please try again",
+  "vautToast": "Please add a title",
+  "vaumToast": "Please add a message",
+  "actvdacuc": "No account found! Please create an account first",
+  "vaducvvc": "You already have an account! Please log in",
+  "lmdpdeamcedcamumumuceucs": "The password must be at least 12 characters long and must contain at least one uppercase letter, one lowercase letter, one number and one special character.",
+  "lndtei": "The phone number is invalid",
+  "vruev": "Please enter a valid email",
+  "uuacndtede": "User with phone already registered",
+  "vvvciToast": "Veuillez vérifier votre connection internet",
+
+
+
+
+  "tvcetc": "Transport your packages\nwith confidence",
+  "fvcuvscdllreets": "Send your package, a traveler\nwill deliver it quickly and\nsafely.",
+  "sc": "Log in",
+  "ouc": "Open an account",
+
+  "bvn": "Welcome",
+  "vrvipc": "Please enter your information\nto get started",
+  "nm": "Last Name",
+  "pnms": "First names",
+  "eml": "Email",
+  "dmr": "Start",
+  "jaduc": "I already have an account",
+
+  "ecucvan": "By creating an account, you accept our ",
+  "cgdu": "General\nTerms of Use ",
+  "etn": "and our ",
+  "pdc": "Privacy Policy. ",
+
+  "eue": "One more step",
+  "cvidc": "Set up your login information",
+  "cuc": "Sign Up",
+  "mdp": "Password",
+  "pxx": "01 XXX XXX XX",
+
+
+  "vdn": "Number verification",
+  "velcepsa": "Please enter the code sent by {provider} to\n{phone}",
+  "@velcepsa": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "provider": {
+        "type": "String",
+        "example": "sms"
+      },
+      "phone": {
+        "type": "String",
+        "example": "+229 61000000"
+      }
+    }
+  },
+  "vnaprlc": "Didn't receive the code?",
+  "dun": "Request a new one",
+  "ctn": "Continue",
+
+  "evndtevmdppvc": "Enter your phone number and\npassword to log in",
+
+  "pqe": "Only 2 steps left",
+  "uvdvamerpc": "An email address verification is required\nto get started",
+  "cplt": "Complete →",
+  "uvdierpc": "An identity verification is required\nto begin",
+
+  "flctt": "Congratulations \uD83C\uDF89",
+  "vcaecas": "Your account has been successfully created",
+  "rch": "Search",
+  "vdm": "Email verification",
+  "vevaeucvse": "Please enter your email address a\ncode will be sent to you",
+  "vamaeveeas": "Your email address has been verified and\nsaved successfully",
+  "vamaeveeasc": "Your email address has been successfully verified and registered. Proceed to identity verification.",
+  "vdi": "Identity verification",
+  "velcepma": "Please enter the code sent by Email\nto {email}",
+  "@velcepma": {
+    "description": "A message with a single email parameter",
+    "placeholders": {
+      "email": {
+        "type": "String",
+        "example": "email@example.com"
+      }
+    }
+  },
+
+  "vpus": "Please take a selfie",
+  "vpupdvpdi": "Please take a photo of your ID",
+  "vaupdieups": "Please take an ID and a selfie photo",
+  "smttr": "Submit",
+  "trmnr": "Finish",
+  "ecdv": "Verification in progress...",
+  "atrsr": "Authorize",
+  "npalvdviurvsfduddhmdvp": "We are verifying your identity. You will receive a response within 48 hours.\nThank you for your patience!",
+  "pclvdikdaavcaqvppupcdvpdieuspccisuuadfdsedvestdms": "To complete the identity verification, Koolika needs to access your camera so you can take a clear photo of your ID and a selfie for confirmation. This information is used for security and verification purposes only, and is handled securely.",
+  "nabdaavc": "We need access to your\ncamera",
+  "vcvv": "Please center your face",
+  "vcvpdi": "Please center your ID",
+  "npauvdvimdvp": "We are performing an identity check.\nThank you for your patience!",
+  "vdiec": "Identity validation in \nprogress...",
+
+  "kl": "Kooli launched!",
+  "vcaecelas": "Your ride has been successfully created and launched.",
+  "rtr": "Back",
+  "vrfr": "Verify",
+  "elcea": "Enter the code sent to {username}",
+  "@elcea": {
+    "description": "A message with a single email parameter",
+    "placeholders": {
+      "username": {
+        "type": "String",
+        "example": "user@example.com"
+      }
+    }
+  },
+  "evidc": "Enter your login information",
+  "tlphn": "Phone",
+  "mdpo": "Forgot password?",
+  "vnapdc": "Don't have an account? ",
+  "vaduc": "Already have an account? ",
+  "ceu": "Sign Up",
+  "cv": "Log in",
+  "evipc": "Enter your information to get started",
+
+  "cdvioe": "Invalid or expired validation code",
+  "tomdpi": "Incorrect phone or password",
+  "ueesvr": "An error occurred! Please try again.",
+
+
+  "duncd":"Demandez un nouveau code dans",
+  "vsucToast":"Veuillez saisir un code",
+  "dmmrr":"Démmarer",
+  "cvlvdi":"Continuez vers la vérification d’identité",
+
+
+
+  "ccnppevToast": "This field cannot be empty",
+  "euk": "Send a Kooli",
+  "vcvk": "Please center your kooli",
+  "tdpdiappdccdrpcdin": "Accepted ID types: - Passport - Driver's License - Permanent Resident (PR) Card - National ID Card",
+  "pclcdckdaavcaqvppdpcdvccisupduaav": "To complete the trip creation, Koolika needs access to your camera so you can take clear pictures of your package. These images are used to give travelers a preview.",
+  "veuaddToast": "Please enter a departure address",
+  "veuadaToast": "Please enter an arrival address",
+  "eldcdpvrToast": "Error calculating the price. Please try again.",
+
+  "cuk": "Create a kooli \uD83D\uDE80",
+  "vrcipc": "Please fill in this information to get started",
+  "dpt": "From",
+  "arrv": "To",
+  "fdc": "Package size",
+  "sbox": "Small box",
+  "mbox": "Medium box",
+  "lbox": "Large box",
+  "ndc": "Package nature",
+  "suedll": "Select an item from the list",
+  "olp": "Get the price",
+  "veudToast": "Please enter a description",
+  "eldlcdvcvrToast": "Error creating your package. Please try again.",
+  "vadidvcToast": "Please add two images of your package",
+  "vplvkps": "You can launch your Kooli for only  ",
+
+  "vddlabep": "Your delivery request has been successfully\npublished",
+  "rala": "Back to home",
+  "dscrpt": "Description",
+  "dccd": "Okay",
+  "pvk": "Publish your kooli \uD83D\uDE80",
+  "rlispc": "Fill in the following information to continue",
+  "slfdcsleltelv": "Select the package size according to its bulk, size, and volume.\u2028 • Small box: accessories, small items, documents\u2028 • Medium box: clothes, shoes, small appliances\u2028 • Large box: bulky items or several combined objects",
+
+  "pnfToast": "Pricing not found",
+  "nrfboadToast": "No route found between origin and destination",
+  "spknfoeToast": "Shipment price key not found or expired",
+  "icdToast": "Inappropriate content detected",
+
+
+  "dcmts": "Documents",
+  "vtmts": "Clothing",
+  "elctrnqu": "Electronics",
+  "accssrs": "Accessories",
+  "art": "Art",
+  "snt": "Health",
+  "almntr": "Food",
+  "atrs": "Others"
+
+}

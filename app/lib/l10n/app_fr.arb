@@ -1,0 +1,190 @@
+{
+  "appTitle": "Koolika",
+
+  "vrtlcToast": "Veuillez remplir tout les champs",
+  "ueesvrToast": "Une erreur est survenue! Veuillez réessayer",
+  "irasvvcToast": "Inscription réussie avec succès! Veuillez vous connecter",
+  "civrToast": "Code incorrect! Veuillez réessayer",
+  "vautToast": "Veuillez ajouter un titre",
+  "vaumToast": "Veuillez ajouter un message",
+  "actvdacuc": "Aucun compte trouvé! Veuillez d'abord créer un compte",
+  "vaducvvc": "Vous avez déjà un compte! Veuillez vous connecter",
+  "lmdpdeamcedcamumumuceucs": "Le mot de passe Doit être d’au moins 12 caractères et doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial.",
+  "lndtei": "Le numéro de téléphone est incorrect",
+  "vruev": "Veuillez renseigner un email valide",
+  "uuacndtede": "Un utilisateur avec ce numéro est déjà enregistré",
+  "vvvciToast": "Veuillez vérifier votre connection internet",
+
+
+  "tvcetc": "Transporter vos colis\nen toute confiance",
+  "fvcuvscdllreets": "Faites votre colis, un voyageur\nse charge de le livrer rapidement et\nen toute sécurité.",
+  "sc": "Se connecter",
+  "ouc": "Ouvrir un compte",
+
+  "bvn": "Bienvenue",
+  "vrvipc": "Veuillez renseigner vos informations\npour commencer",
+  "nm": "Nom",
+  "pnms": "Prénoms",
+  "eml": "Email",
+  "dmr": "Démmarer",
+  "jaduc": "J’ai déjà un compte",
+
+  "ecucvan": "En créant un compte, vous acceptez nos ",
+  "cgdu": "Conditions\nGénérales d’Utilisation ",
+  "etn": "et notre ",
+  "pdc": "Politique de Confidentialité. ",
+
+  "eue": "Encore une étape",
+  "cvidc": "Configurez vos informations\nde connection",
+  "cuc": "Créer un compte",
+  "mdp": "Mot de passe",
+  "pxx": "01 XXX XXX XX",
+
+
+  "vdn": "Vérification du numéro",
+  "velcepsa": "Veuillez entrez le code envoyé par {provider} au\n{phone}",
+  "@velcepsa": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "provider": {
+        "type": "String",
+        "example": "sms"
+      },
+      "phone": {
+        "type": "String",
+        "example": "+229 61000000"
+      }
+    }
+  },
+  "vnaprlc": "Vous n’avez pas reçu le code ?",
+  "dun": "Demander un nouveau",
+  "ctn": "Continuer",
+
+  "evndtevmdppvc": "Entrez votre numéro de téléphone et\nvotre mot de passe pour vous\nconnecter",
+
+  "pqe": "Plus que 2 étapes",
+  "uvdvamerpc": "Une vérification de votre adresse mail est requise\npour commencer",
+  "cplt": "Completer →",
+  "uvdierpc": "Une vérification d’identité est requise pour\ncommencer",
+
+  "flctt": "Félicitation \uD83C\uDF89",
+  "vcaecas": "Votre compte à été créé avec succès",
+  "rch": "Rechercher",
+  "vdm": "Vérification du mail",
+  "vevaeucvse": "Veuillez entrez votre adresse email un\ncode vous sera envoyé",
+  "vamaeveeas": "Votre adresse mail a été vérifiée et\nenregistrée avec succès",
+  "vamaeveeasc": "Votre adresse mail a été vérifiée et enregistrée avec succès. Continuez vers la vérification d’identité",
+  "vdi": "Vérification d’identité",
+  "velcepma": "Veuillez entrez le code envoyé par Mail\nau {email}",
+  "@velcepma": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "email": {
+        "type": "String",
+        "example": "email@example.com"
+      }
+    }
+  },
+
+
+  "vpus": "Veuillez prendre un selfie",
+  "vpupdvpdi": "Veuillez prendre un photo de votre pièce d'identité",
+  "vaupdieups": "Veuillez prendre une photo d'une pièce d'identité et une photo selfie",
+  "smttr": "Soumettre",
+  "trmnr": "Terminer",
+  "ecdv": "En cours de vérification...",
+  "atrsr": "Autoriser",
+  "npalvdviurvsfduddhmdvp": "Nous procédons à la vérification de votre identité. Un retour vous sera fait dans un délais de 48 heures.\nMerci de votre patience !",
+  "pclvdikdaavcaqvppupcdvpdieuspccisuuadfdsedvestdms": "Pour compléter la vérification d’identité, Koolika doit accéder à votre caméra afin que vous puissiez prendre une photo claire de votre pièce d’identité et un selfie pour confirmation. Ces informations sont utilisées uniquement à des fins de sécurité et de vérification, et sont traitées de manière sécurisée.",
+  "nabdaavc": "Nous avons besoin d’accéder\nà votre caméra",
+  "vcvv": "Veuillez centrer votre visage",
+  "vcvpdi": "Veuillez centrer votre pièce d’identité",
+  "npauvdvimdvp": "Nous procédons à une vérification de votre identité.\nMerci de votre patience !",
+  "vdiec": "Validation d’identité en \ncours...",
+
+  "kl": "Kooli lancé !",
+  "vcaecelas": "Votre course à été créé et lancé avec succès.",
+  "rtr": "Retour",
+  "vrfr": "Vérifier",
+  "elcea": "Entrez le code envoyé au {username}",
+  "@elcea": {
+    "description": "A message with a single email parameter",
+    "placeholders": {
+      "username": {
+        "type": "String",
+        "example": "email@example.com"
+      }
+    }
+  },
+  "evidc": "Entrez vos informations de connexion",
+  "tlphn": "Téléphone",
+  "mdpo": "Mot de passe oublié ?",
+  "vnapdc": "Pas de compte ? ",
+  "ceu": "Créez-en un",
+  "vaduc": "Déjà un compte ? ",
+  "cv": "Connectez-vous",
+  "evipc": "Entrez vos informations pour commencer",
+
+
+
+  "cdvioe":"Code de validation incorrect ou expiré",
+  "tomdpi":"Téléphone ou mot de passe incorrect",
+  "ueesvr":"Une erreur est survenue! Veuillez réessayer.",
+
+
+
+  "duncd":"Demandez un nouveau code dans",
+  "vsucToast":"Veuillez saisir un code",
+  "dmmrr":"Démmarer",
+  "cvlvdi":"Continuez vers la vérification d’identité",
+
+
+  "ccnppevToast": "Ce champ ne peut pas être vide",
+  "euk": "Envoyer un Kooli",
+  "vcvk": "Veuillez centrer votre kooli",
+  "tdpdiappdccdrpcdin": "Types de pièces d’identité acceptés :  - Passeport - Permis de conduire - Carte de Résidence Permanente(RP) - Carte d’Identité Nationale",
+  "pclcdckdaavcaqvppdpcdvccisupduaav": "Pour compléter la création de course, Koolika doit accéder à votre caméra afin que vous puissiez prendre des photos claires de votre colis. Ces images sont utilisées pour donner un aperçu aux voyageur.",
+  "veuaddToast": "Veuillez entrer un adresse de départ",
+  "veuadaToast": "Veuillez entrer un adresse d'arrivée",
+  "eldcdpvrToast": "Erreur lors du calcul du prix. Veuillez réessayer.",
+
+  "cuk": "Créer un kooli \uD83D\uDE80",
+  "vrcipc": "Veuillez remplir ces informations pour commencer",
+  "dpt": "Départ",
+  "arrv": "Arrivée",
+  "fdc": "Format du colis",
+  "sbox": "Petit",
+  "mbox": "Moyen",
+  "lbox": "Grand",
+  "ndc": "Nature du colis",
+  "suedll": "Sélectionnez un élément de la liste",
+  "olp": "Obtenir le prix",
+  "veudToast": "Veuillez entrer une description",
+  "eldlcdvcvrToast": "Erreur lors de la création de votre colis. Veuillez réessayer.",
+  "vadidvcToast": "Veuillez ajouter deux images de votre colis",
+  "vplvkps": "Vous pouvez lancer votre Kooli pour seulement  ",
+
+  "vddlabep": "Votre demande de livraison a bien \nété publiée",
+  "rala": "Retour à l'accueil",
+  "dscrpt": "Description",
+  "dccd": "D'accord",
+  "pvk": "Publiez votre kooli \uD83D\uDE80",
+  "rlispc": "Renseignez les informations suivantes pour continuer",
+  "slfdcsleltelv": "Sélectionnez le format du colis selon l’encombrement, la taille et le volume.\u2028 • Small box : accessoires, petits objets, documents\u2028 • Medium box : vêtements, chaussures, petits appareils\u2028 • Large box : articles volumineux ou plusieurs objets combinés",
+
+  "pnfToast": "Tarif non trouvé",
+  "nrfboadToast": "Aucun itinéraire trouvé entre l'origine et la destination",
+  "spknfoeToast": "Clé de prix de l'envoi non trouvée ou expirée",
+  "icdToast": "Contenu inapproprié détecté",
+
+  "dcmts": "Documents",
+  "vtmts": "Vêtements",
+  "elctrnqu": "Électronique",
+  "accssrs": "Accessoires",
+  "art": "Art",
+  "snt": "Santé",
+  "almntr": "Alimentaire",
+  "atrs": "Autres"
+}
+
+
