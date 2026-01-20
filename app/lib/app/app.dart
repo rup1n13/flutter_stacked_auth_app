@@ -7,15 +7,9 @@ import 'package:nabi/ui/views/on_boarding/onboarding_slides/onboarding_slides_vi
 import 'package:nabi/ui/views/on_boarding/register/register_npi_entry_view.dart';
 import 'package:nabi/ui/views/on_boarding/register/register_npi_loading_view.dart';
 import 'package:nabi/ui/views/on_boarding/register/register_npi_result_view.dart';
-import 'package:nabi/ui/views/on_boarding/register/register_phone_view.dart';
 import 'package:nabi/ui/views/on_boarding/register/register_otp_view.dart';
-import 'package:nabi/ui/views/on_boarding/register/register_personal_info_view.dart';
-import 'package:nabi/ui/views/on_boarding/register/register_address_view.dart';
 import 'package:nabi/ui/views/on_boarding/register/register_terms_view.dart';
 import 'package:nabi/ui/views/on_boarding/register/register_pin_view.dart';
-import 'package:nabi/ui/views/on_boarding/register/register_document_view.dart';
-import 'package:nabi/ui/views/on_boarding/register/register_selfie_view.dart';
-import 'package:nabi/ui/views/on_boarding/register/register_success_view.dart';
 import 'package:nabi/ui/views/on_boarding/register/register_final_success_view.dart';
 import 'package:nabi/ui/components/widget/app_toast.dart';
 import 'package:stacked/stacked_annotations.dart';
@@ -31,15 +25,9 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: RegisterNpiEntryView),
     MaterialRoute(page: RegisterNpiLoadingView),
     MaterialRoute(page: RegisterNpiResultView),
-    MaterialRoute(page: RegisterPhoneView),
     MaterialRoute(page: RegisterOtpView),
-    MaterialRoute(page: RegisterPersonalInfoView),
-    MaterialRoute(page: RegisterAddressView),
     MaterialRoute(page: RegisterTermsView),
     MaterialRoute(page: RegisterPinView),
-    MaterialRoute(page: RegisterDocumentView),
-    MaterialRoute(page: RegisterSelfieView),
-    MaterialRoute(page: RegisterSuccessView),
     MaterialRoute(page: RegisterFinalSuccessView),
     // @stacked-route
   ],

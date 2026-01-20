@@ -30,14 +30,14 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
                     'Créer un mot de passe (PIN)',
                     style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                       color: black,
                       fontFamily: 'CenturyGothic',
                     ),
                   ),
                   Container(
-                    height: 3,
-                    width: 60,
+                    height: 2,
+                    width: 50,
                     color: colorGreen,
                     margin: const EdgeInsets.only(top: 4),
                   ),
@@ -47,14 +47,14 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
               const Text(
                 'Définissez votre PIN',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   color: black,
                   fontFamily: 'CenturyGothic',
                 ),
               ),
               vSpace(12),
               Container(
-                height: 55,
+                height: 50,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 decoration: BoxDecoration(
                   color: const Color(0xFFF5F5F5),
@@ -70,7 +70,7 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
                         keyboardType: TextInputType.number,
                         maxLength: 4,
                         style: const TextStyle(
-                          fontSize: 24,
+                          fontSize: 20,
                           letterSpacing: 8,
                           color: black,
                         ),
@@ -83,7 +83,8 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
                     IconButton(
                       icon: Icon(
                         viewModel.showPin ? Icons.visibility : Icons.visibility_off,
-                        color: colorGrey,
+                        color: const Color(0xFF888888),
+                        size: 20,
                       ),
                       onPressed: viewModel.togglePinVisibility,
                     ),
@@ -95,7 +96,7 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
                 'Uniquement les chiffres de 4 digits',
                 style: TextStyle(
                   fontSize: 12,
-                  color: colorGrey,
+                  color: Color(0xFF888888),
                   fontFamily: 'CenturyGothic',
                 ),
               ),
@@ -103,14 +104,14 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
               const Text(
                 'Confirmez le PIN',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   color: black,
                   fontFamily: 'CenturyGothic',
                 ),
               ),
               vSpace(12),
               Container(
-                height: 55,
+                height: 50,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 decoration: BoxDecoration(
                   color: const Color(0xFFF5F5F5),
@@ -126,7 +127,7 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
                         keyboardType: TextInputType.number,
                         maxLength: 4,
                         style: const TextStyle(
-                          fontSize: 24,
+                          fontSize: 20,
                           letterSpacing: 8,
                           color: black,
                         ),
@@ -139,7 +140,8 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
                     IconButton(
                       icon: Icon(
                         viewModel.showConfirmPin ? Icons.visibility : Icons.visibility_off,
-                        color: colorGrey,
+                        color: const Color(0xFF888888),
+                        size: 20,
                       ),
                       onPressed: viewModel.toggleConfirmPinVisibility,
                     ),
@@ -147,13 +149,16 @@ class RegisterPinView extends StackedView<RegisterPinViewModel> {
                 ),
               ),
               const Spacer(),
-              AppButton(
-                onTap: viewModel.onValidatePressed,
-                title: 'Valider',
-                colorBg: colorGreen,
-                height: 50,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 0),
+                child: AppButton(
+                  onTap: viewModel.onValidatePressed,
+                  title: 'Valider',
+                  colorBg: colorGreen,
+                  height: 50,
+                ),
               ),
-              vSpace(20),
+              vSpace(24),
             ],
           ),
         ),

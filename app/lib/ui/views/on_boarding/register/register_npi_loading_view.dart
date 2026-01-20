@@ -28,32 +28,32 @@ class RegisterNpiLoadingView extends StackedView<RegisterNpiLoadingViewModel> {
                   const Text(
                     'Créer un compte',
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
                       color: black,
                       fontFamily: 'CenturyGothic',
                     ),
                   ),
                   Container(
-                    height: 3,
-                    width: 60,
+                    height: 2,
+                    width: 50,
                     color: colorGreen,
                     margin: const EdgeInsets.only(top: 4),
                   ),
                 ],
               ),
-              vSpace(32),
+              vSpace(40),
               const Text(
                 'Entrez le NPI du membre',
                 style: TextStyle(
-                  fontSize: 16,
-                  color: colorGrey,
+                  fontSize: 14,
+                  color: Color(0xFFAAAAAA),
                   fontFamily: 'CenturyGothic',
                 ),
               ),
               vSpace(12),
               Container(
-                height: 55,
+                height: 50,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 decoration: BoxDecoration(
                   color: const Color(0xFFF5F5F5),
@@ -65,7 +65,7 @@ class RegisterNpiLoadingView extends StackedView<RegisterNpiLoadingViewModel> {
                   '2289074575409',
                   style: TextStyle(
                     fontSize: 16,
-                    color: colorGrey,
+                    color: Color(0xFFAAAAAA),
                     fontFamily: 'CenturyGothic',
                   ),
                 ),
@@ -73,8 +73,8 @@ class RegisterNpiLoadingView extends StackedView<RegisterNpiLoadingViewModel> {
               const Spacer(),
               const Center(
                 child: SizedBox(
-                  width: 50,
-                  height: 50,
+                  width: 40,
+                  height: 40,
                   child: CircularProgressIndicator(
                     strokeWidth: 3,
                     valueColor: AlwaysStoppedAnimation<Color>(colorGreen),

@@ -28,21 +28,21 @@ class RegisterOtpView extends StackedView<RegisterOtpViewModel> {
                   const Text(
                     'Confirmez votre téléphone',
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
                       color: black,
                       fontFamily: 'CenturyGothic',
                     ),
                   ),
                   Container(
-                    height: 3,
-                    width: 60,
+                    height: 2,
+                    width: 50,
                     color: colorGreen,
                     margin: const EdgeInsets.only(top: 4),
                   ),
                 ],
               ),
-              vSpace(32),
+              vSpace(40),
               const Text(
                 'Un code de confirmation a été envoyé sur le +229 66246031',
                 style: TextStyle(
@@ -51,17 +51,17 @@ class RegisterOtpView extends StackedView<RegisterOtpViewModel> {
                   fontFamily: 'CenturyGothic',
                 ),
               ),
-              vSpace(40),
+              vSpace(32),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(4, (index) {
                   return Container(
-                    width: 60,
-                    height: 60,
+                    width: 64,
+                    height: 64,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: const Color(0xFFE0E0E0)),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: const Color(0xFFE0E0E0), width: 1.5),
                     ),
                     child: TextField(
                       controller: viewModel.otpControllers[index],
@@ -69,8 +69,8 @@ class RegisterOtpView extends StackedView<RegisterOtpViewModel> {
                       keyboardType: TextInputType.number,
                       maxLength: 1,
                       style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
                         color: black,
                       ),
                       decoration: const InputDecoration(
@@ -98,7 +98,7 @@ class RegisterOtpView extends StackedView<RegisterOtpViewModel> {
                         ? 'Renvoyer le code'
                         : 'Renvoyer le code dans ${viewModel.countdown}s',
                     style: TextStyle(
-                      color: viewModel.canResend ? colorGreen : colorGrey,
+                      color: viewModel.canResend ? colorGreen : const Color(0xFF888888),
                       fontSize: 14,
                       fontFamily: 'CenturyGothic',
                     ),

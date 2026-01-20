@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stacked/stacked.dart';
 import '../../../../commons/app_colors.dart';
 import '../../../../commons/app_ui_helpers.dart';
@@ -27,19 +28,19 @@ class OnboardingSlidesView extends StackedView<OnboardingSlidesViewModel> {
                     title: 'Réalise tes objectifs avec assurances',
                     description:
                         'Rejoins une tontine sur les produits\n que tu as toujours voulu.',
-                    illustration: '🎯',
+                    illustration: 'assets/svg/onboarding_slide_1.svg',
                   ),
                   _buildSlide(
                     title: 'Sauvegarde mieux tes revenus',
                     description:
                         'Epargne tes économies à ton rythme\nsecurisé et très transparents crédit.',
-                    illustration: '💰',
+                    illustration: 'assets/svg/onboarding_slide_2.svg',
                   ),
                   _buildSlide(
                     title: 'Devient Propriétaire\ngrâce à Nabi',
                     description:
                         'Toutes les produits que toutes\n bénéficie d\'une basse d\'achat que Nabi',
-                    illustration: '🏠',
+                    illustration: 'assets/svg/onboarding_slide_3.svg',
                   ),
                 ],
               ),
@@ -105,9 +106,12 @@ class OnboardingSlidesView extends StackedView<OnboardingSlidesViewModel> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            illustration,
-            style: const TextStyle(fontSize: 120),
+          SizedBox(
+            height: 250,
+            child: SvgPicture.asset(
+              illustration,
+              fit: BoxFit.contain,
+            ),
           ),
           vSpace(40),
           Text(
@@ -124,7 +128,7 @@ class OnboardingSlidesView extends StackedView<OnboardingSlidesViewModel> {
           Text(
             description,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 14,
               color: colorGrey,
               height: 1.5,
