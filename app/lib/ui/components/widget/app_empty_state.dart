@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../commons/app_ui_helpers.dart';
 
@@ -22,8 +21,11 @@ class AppEmptyState extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset("",
-              width: 220,),
+            const Icon(
+              Icons.inbox_outlined,
+              size: 120,
+              color: Color(0xFFCCCCCC),
+            ),
           ],
         ),
         vSpace(24),

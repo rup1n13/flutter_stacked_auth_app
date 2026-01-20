@@ -36,7 +36,7 @@ class OnboardingSlidesViewModel extends BaseViewModel {
   }
 
   void navigateToRegister() {
-    _navigationService.replaceWithRegisterPhoneView();
+    _navigationService.replaceWithRegisterNpiEntryView();
   }
 
   @override

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import '../../../../commons/app_colors.dart';
 import '../../../../commons/app_ui_helpers.dart';
-import '../../../components/widget/app_button.dart';
-import '../../../components/widget/app_otp.dart';
 import 'register_otp_viewmodel.dart';
 
 class RegisterOtpView extends StackedView<RegisterOtpViewModel> {
@@ -17,68 +15,97 @@ class RegisterOtpView extends StackedView<RegisterOtpViewModel> {
   ) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(
-        backgroundColor: backgroundColor,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              vSpace(20),
+              vSpace(40),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Confirmez votre téléphone',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: black,
+                      fontFamily: 'CenturyGothic',
+                    ),
+                  ),
+                  Container(
+                    height: 3,
+                    width: 60,
+                    color: colorGreen,
+                    margin: const EdgeInsets.only(top: 4),
+                  ),
+                ],
+              ),
+              vSpace(32),
               const Text(
-                'Vérification',
+                'Un code de confirmation a été envoyé sur le +229 66246031',
                 style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
                   color: black,
                   fontFamily: 'CenturyGothic',
                 ),
               ),
-              vSpace(12),
-              const Text(
-                'Entrez le code que nous vous avons\nenvoyé par SMS',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: colorGrey,
-                  fontFamily: 'CenturyGothic',
-                ),
-              ),
               vSpace(40),
-              AppOtp(
-                onSubmit: (code) {
-                  viewModel.otpCode = code;
-                },
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: List.generate(4, (index) {
+                  return Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: const Color(0xFFE0E0E0)),
+                    ),
+                    child: TextField(
+                      controller: viewModel.otpControllers[index],
+                      textAlign: TextAlign.center,
+                      keyboardType: TextInputType.number,
+                      maxLength: 1,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: black,
+                      ),
+                      decoration: const InputDecoration(
+                        border: InputBorder.none,
+                        counterText: '',
+                      ),
+                      onChanged: (value) {
+                        if (value.length == 1 && index < 3) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                        if (value.length == 1 && index == 3) {
+                          viewModel.onOtpComplete();
+                        }
+                      },
+                    ),
+                  );
+                }),
               ),
               vSpace(24),
               Center(
-                child: TextButton(
-                  onPressed: viewModel.onResendPressed,
-                  child: const Text(
-                    'Renvoyer le code',
+                child: GestureDetector(
+                  onTap: viewModel.canResend ? viewModel.onResendPressed : null,
+                  child: Text(
+                    viewModel.canResend
+                        ? 'Renvoyer le code'
+                        : 'Renvoyer le code dans ${viewModel.countdown}s',
                     style: TextStyle(
-                      color: colorGreen,
+                      color: viewModel.canResend ? colorGreen : colorGrey,
                       fontSize: 14,
-                      fontWeight: FontWeight.w600,
                       fontFamily: 'CenturyGothic',
                     ),
                   ),
                 ),
               ),
               const Spacer(),
-              AppButton(
-                onTap: viewModel.onVerifyPressed,
-                title: 'Vérifier',
-                colorBg: colorGreen,
-                height: 50,
-              ),
-              vSpace(20),
             ],
           ),
         ),
@@ -89,4 +116,8 @@ class RegisterOtpView extends StackedView<RegisterOtpViewModel> {
   @override
   RegisterOtpViewModel viewModelBuilder(BuildContext context) =>
       RegisterOtpViewModel();
+
+  @override
+  void onViewModelReady(RegisterOtpViewModel viewModel) =>
+      viewModel.startCountdown();
 }

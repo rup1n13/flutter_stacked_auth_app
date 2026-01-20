@@ -3,19 +3,10 @@ import 'package:stacked_services/stacked_services.dart';
 import '../../../../app/app.locator.dart';
 import '../../../../app/app.router.dart';
 
-class RegisterTermsViewModel extends BaseViewModel {
+class RegisterStatusConfirmationViewModel extends BaseViewModel {
   final _navigationService = locator<NavigationService>();
 
-  bool isAccepted = false;
-
-  void toggleAcceptance() {
-    isAccepted = !isAccepted;
-    rebuildUi();
-  }
-
   void onContinuePressed() {
-    if (isAccepted) {
-      _navigationService.navigateToRegisterPinView();
-    }
+    _navigationService.navigateToRegisterDocumentGuideView();
   }
 }

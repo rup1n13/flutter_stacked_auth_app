@@ -16,148 +16,107 @@ class RegisterTermsView extends StackedView<RegisterTermsViewModel> {
   ) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(
-        backgroundColor: backgroundColor,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: const Text(
-          'Conditions générales',
-          style: TextStyle(
-            color: black,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'CenturyGothic',
-          ),
-        ),
-        centerTitle: true,
-      ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Conditions générales d\'utilisation',
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              vSpace(40),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Conditions générales d\'utilisation',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: black,
+                      fontFamily: 'CenturyGothic',
+                    ),
+                  ),
+                  Container(
+                    height: 3,
+                    width: 60,
+                    color: colorGreen,
+                    margin: const EdgeInsets.only(top: 4),
+                  ),
+                ],
+              ),
+              vSpace(24),
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF5F7FA),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const SingleChildScrollView(
+                    child: Text(
+                      '1. Objet : L\'application permet de créer, gérer et suivre des tontines entre membres.\n\n'
+                      '2. Inscription : Chaque utilisateur doit fournir des informations exactes et protéger ses identifiants.\n\n'
+                      '3. Fonctionnement : Les règles de la tontine (montant, fréquence, ordre de passage) sont fixées par l\'administrateur et doivent être respectées par tous.\n\n'
+                      '4. Engagements : Chaque membre s\'engage à payer ses cotisations dans les délais et à respecter les autres participants.\n\n'
+                      '5. Responsabilités :\n'
+                      '   - L\'application n\'est qu\'un outil de gestion et n\'est pas responsable des litiges ou impayés entre utilisateurs.\n'
+                      '   - Chaque utilisateur est responsable de ses engagements.\n\n'
+                      '6. Données personnelles : Les informations des utilisateurs sont protégées et utilisées uniquement pour le bon fonctionnement de l\'application.\n\n'
+                      '7. Résiliation : Le non-respect des règles peut entraîner la suspension du compte.',
                       style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: black,
+                        height: 1.5,
+                        fontFamily: 'CenturyGothic',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              vSpace(20),
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: viewModel.toggleAcceptance,
+                    child: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: viewModel.isAccepted ? colorGreen : Colors.white,
+                        border: Border.all(
+                          color: viewModel.isAccepted ? colorGreen : const Color(0xFFE0E0E0),
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: viewModel.isAccepted
+                          ? const Icon(Icons.check, size: 16, color: Colors.white)
+                          : null,
+                    ),
+                  ),
+                  hSpace(12),
+                  const Expanded(
+                    child: Text(
+                      'J\'accepte les conditions d\'utilisation',
+                      style: TextStyle(
+                        fontSize: 14,
                         color: black,
                         fontFamily: 'CenturyGothic',
                       ),
                     ),
-                    vSpace(16),
-                    _buildTermsText(),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
-                color: backgroundColor,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
-                    blurRadius: 10,
-                    offset: const Offset(0, -5),
                   ),
                 ],
               ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Checkbox(
-                        value: viewModel.isAccepted,
-                        onChanged: (value) => viewModel.toggleAcceptance(),
-                        activeColor: colorGreen,
-                      ),
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () => viewModel.toggleAcceptance(),
-                          child: const Text(
-                            'J\'accepte les conditions générales d\'utilisation',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: black,
-                              fontFamily: 'CenturyGothic',
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  vSpace(16),
-                  AppButton(
-                    onTap: viewModel.onContinuePressed,
-                    title: 'Accepter et continuer',
-                    colorBg: viewModel.isAccepted ? colorGreen : colorGrey,
-                    height: 50,
-                  ),
-                ],
+              vSpace(20),
+              AppButton(
+                onTap: viewModel.isAccepted ? viewModel.onContinuePressed : null,
+                title: 'Continuer',
+                colorBg: viewModel.isAccepted ? colorGreen : colorGrey.withOpacity(0.3),
+                height: 50,
               ),
-            ),
-          ],
+              vSpace(20),
+            ],
+          ),
         ),
-      ),
-    );
-  }
-
-  Widget _buildTermsText() {
-    return const Text(
-      '''
-1. ACCEPTATION DES CONDITIONS
-En accédant et en utilisant l'application Nabi, vous acceptez d'être lié par les présentes conditions générales d'utilisation.
-
-2. DESCRIPTION DU SERVICE
-Nabi est une plateforme de tontine digitale qui permet aux utilisateurs de participer à des groupes d'épargne collective pour acquérir des biens.
-
-3. INSCRIPTION ET COMPTE
-- Vous devez fournir des informations exactes et complètes lors de l'inscription
-- Vous êtes responsable de la confidentialité de votre compte
-- Vous devez avoir au moins 18 ans pour utiliser ce service
-
-4. VÉRIFICATION D'IDENTITÉ (KYC)
-- Une vérification d'identité est requise pour accéder à certaines fonctionnalités
-- Vous devez fournir des documents d'identité valides
-- Nabi se réserve le droit de refuser ou suspendre un compte si les informations fournies sont incorrectes
-
-5. PARTICIPATION AUX TONTINES
-- Les contributions doivent être effectuées dans les délais convenus
-- Des pénalités peuvent s'appliquer en cas de retard de paiement
-- L'ordre de distribution est déterminé selon les règles de chaque tontine
-
-6. RESPONSABILITÉS
-- Nabi agit comme intermédiaire et facilitateur
-- Les utilisateurs sont responsables de leurs engagements financiers
-- Nabi ne peut être tenu responsable des défauts de paiement des autres participants
-
-7. PROTECTION DES DONNÉES
-Vos données personnelles sont collectées et traitées conformément à notre politique de confidentialité.
-
-8. MODIFICATION DES CONDITIONS
-Nabi se réserve le droit de modifier ces conditions à tout moment. Les utilisateurs seront informés des changements importants.
-
-9. RÉSILIATION
-Nabi peut suspendre ou résilier votre compte en cas de violation de ces conditions.
-
-10. CONTACT
-Pour toute question concernant ces conditions, contactez-nous via l'application.
-
-Dernière mise à jour : Janvier 2026
-      ''',
-      style: TextStyle(
-        fontSize: 13,
-        color: colorGrey,
-        height: 1.6,
-        fontFamily: 'CenturyGothic',
       ),
     );
   }

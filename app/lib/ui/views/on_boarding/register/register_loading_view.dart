@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'splash_viewmodel.dart';
+import 'register_loading_viewmodel.dart';
 
-class SplashView extends StackedView<SplashViewModel> {
-  const SplashView({super.key});
+class RegisterLoadingView extends StackedView<RegisterLoadingViewModel> {
+  const RegisterLoadingView({super.key});
 
   @override
   Widget builder(
     BuildContext context,
-    SplashViewModel viewModel,
+    RegisterLoadingViewModel viewModel,
     Widget? child,
   ) {
     return Scaffold(
@@ -17,15 +17,10 @@ class SplashView extends StackedView<SplashViewModel> {
           color: Color(0xFF27AE60),
         ),
         child: Center(
-          child: Container(
-            width: 150,
-            height: 150,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-            ),
-            child: Center(
-              child: RichText(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RichText(
                 textAlign: TextAlign.center,
                 text: const TextSpan(
                   children: [
@@ -33,7 +28,7 @@ class SplashView extends StackedView<SplashViewModel> {
                       text: 'N',
                       style: TextStyle(
                         color: Color(0xFFEB5757),
-                        fontSize: 32,
+                        fontSize: 48,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'CenturyGothic',
                       ),
@@ -41,8 +36,8 @@ class SplashView extends StackedView<SplashViewModel> {
                     TextSpan(
                       text: 'abi',
                       style: TextStyle(
-                        color: Color(0xFF27AE60),
-                        fontSize: 32,
+                        color: Colors.white,
+                        fontSize: 48,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'CenturyGothic',
                       ),
@@ -50,7 +45,16 @@ class SplashView extends StackedView<SplashViewModel> {
                   ],
                 ),
               ),
-            ),
+              const SizedBox(height: 40),
+              const SizedBox(
+                width: 50,
+                height: 50,
+                child: CircularProgressIndicator(
+                  strokeWidth: 3,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -58,8 +62,10 @@ class SplashView extends StackedView<SplashViewModel> {
   }
 
   @override
-  SplashViewModel viewModelBuilder(BuildContext context) => SplashViewModel();
+  RegisterLoadingViewModel viewModelBuilder(BuildContext context) =>
+      RegisterLoadingViewModel();
 
   @override
-  void onViewModelReady(SplashViewModel viewModel) => viewModel.initialize();
+  void onViewModelReady(RegisterLoadingViewModel viewModel) =>
+      viewModel.initialize();
 }

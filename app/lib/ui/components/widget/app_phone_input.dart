@@ -4,7 +4,6 @@ import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:nabi/ui/components/widget/app_input_validator.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../app/app.locator.dart';
 import '../../../commons/app_colors.dart';
 // import '../../../domain/repos/auth_repository.dart';
 
@@ -75,7 +74,7 @@ class AppPhoneInputState extends State<AppPhoneInput> {
     super.dispose();
   }
 
-  _buildTextField(context, ViewModel model) {
+  _buildTextField(context, PhoneInputViewModel model) {
     return Container(
       height: errorMessage==null ? 55:75,
       //padding: EdgeInsets.only(top: w(0), left: w(10), right: w(14)),
@@ -121,16 +120,16 @@ class AppPhoneInputState extends State<AppPhoneInput> {
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<ViewModel>.reactive(
+    return ViewModelBuilder<PhoneInputViewModel>.reactive(
       onViewModelReady: (model) => model.init(),
       builder: (context, model, child) => _buildTextField(context, model),
       disposeViewModel: false,
-      viewModelBuilder: () => locator<ViewModel>(),
+      viewModelBuilder: () => PhoneInputViewModel(),
     );
   }
 }
 
-class ViewModel extends BaseViewModel {
+class PhoneInputViewModel extends BaseViewModel {
 
   PhoneNumber number = PhoneNumber(isoCode: 'BJ');
 
